@@ -1,0 +1,50 @@
+[    
+    {
+        "Crop": "Wheat",
+        "MSPforRMS22": 1975,
+        "MSPforRMS23": 2015,
+        "CostOfProduction": 1008,
+        "AbsoluteIncrease": 40,
+        "Return": 100
+    },
+    {
+        "Crop": "Barley",
+        "MSPforRMS22": 1600,
+        "MSPforRMS23": 1635,
+        "CostOfProduction": 1019,
+        "AbsoluteIncrease": 35,
+        "Return": 60
+    },
+    {
+        "Crop": "Gram",
+        "MSPforRMS22": 5100,
+        "MSPforRMS23": 5230,
+        "CostOfProduction": 3004,
+        "AbsoluteIncrease": 130,
+        "Return": 74
+    },
+    {
+        "Crop": "Masur (Lentil)",
+        "MSPforRMS22": 5100,
+        "MSPforRMS23": 5500,
+        "CostOfProduction": 3079,
+        "AbsoluteIncrease": 400,
+        "Return": 79
+    },
+    {
+        "Crop": "Rapeseed & Mustard",
+        "MSPforRMS22": 4650,
+        "MSPforRMS23": 5050,
+        "CostOfProduction": 2523,
+        "AbsoluteIncrease": 400,
+        "Return": 100
+    },
+    {
+        "Crop": "Safflower",
+        "MSPforRMS22": 5327,
+        "MSPforRMS23": 5441,
+        "CostOfProduction": 3627,
+        "AbsoluteIncrease": 114,
+        "Return": 50
+    }
+]

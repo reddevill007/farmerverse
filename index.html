@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Farmerverse</title>
+    <!---- Font Awesome Cdn Linkage ------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!------- Favicon Linkage --------->
+    <link rel="shortcut icon" href="images/1.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- INCLUDING JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid container">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="images/1.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="yojna.html">Yojna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="msp.html">MSP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Major Crops
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Wheat" target="_blank">Wheat</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Maize" target="_blank">Maize</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Rice" target="_blank">Rice</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Pulses" target="_blank">Pulses</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Jute" target="_blank">Jute</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Sugercane" target="_blank">Sugercane</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">More...</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ChatBot -->
+
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        Chat with us!
+        <i
+          id="chat-icon"
+          style="color: #fff"
+          class="fa fa-fw fa-comments-o"
+        ></i>
+      </button>
+
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
+
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Tap 'Enter' to send a message"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <i
+                    id="chat-icon"
+                    style="color: crimson"
+                    class="fa fa-fw fa-heart"
+                    onclick="heartButton()"
+                  ></i>
+                  <i
+                    id="chat-icon"
+                    style="color: #333"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ChatBot end -->
+    <section class="home">
+      <div class="weather-box">
+        <div class="search">
+          <input type="text" class="search-bar" placeholder="Search" />
+          <button style="border-radius: 50%; margin-left: 10px;">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1.5em"
+              width="1.5em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="weather loading">
+          <h2 class="city">Weather in Delhi</h2>
+          <h1 class="temp">51°C</h1>
+          <div class="flex">
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt=""
+              class="icon"
+            />
+            <div class="description">Cloudy</div>
+          </div>
+          <div class="humidity">Humidity: 60%</div>
+          <div class="wind">Wind speed: 6.2 km/h</div>
+        </div>
+      </div>
+    </section>
+    <section class="benifit">
+      <div class="container">
+        <div class="heading">
+          <h1>Learn <span>Anything</span></h1>
+        </div>
+        <div class="benifit-cont">
+          <div class="benifit-img">
+            <img src="images/bg1.jpg" alt="image" />
+          </div>
+          <div class="benifit-content">
+            <h1>Benifit About Online Learning Expertise</h1>
+            <div class="benifit-container">
+              <div class="benifit-box">
+                <div class="benifit-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="benif-details">
+                  <h3>Farmer Centered</h3>
+                </div>
+              </div>
+              <div class="benifit-box">
+                <div class="benifit-icon">
+                  <i class="fas fa-money-check-alt"></i>
+                </div>
+                <div class="benif-details">
+                  <h3>Increase Crop Production</h3>
+                </div>
+              </div>
+              <div class="benifit-box">
+                <div class="benifit-icon">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="benif-details">
+                  <h3>Connect with experts</h3>
+                </div>
+              </div>
+              <div class="benifit-box">
+                <div class="benifit-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="benif-details">
+                  <h3>MorLive interaction</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="heading">
+        <h1>Agriculture <span>News</span></h1>
+      </div>
+      <div class="container" id="containerNews">
+        <div class="row">
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/responsis.js"></script>
+  </body>
+</html>
